@@ -11,7 +11,9 @@ def generateStats():
     for i in range(1, 7, 1):
         for x in range(1, 5, 1):
             rolls.append(randint(1, 6))
-        rolls.remove(min(rolls))
+        rolls.sort()
+        print(rolls)
+        rolls.remove(rolls[0])
         statArray.append(sum(rolls))
         rolls.clear()
     return statArray
